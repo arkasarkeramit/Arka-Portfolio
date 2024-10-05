@@ -7,11 +7,13 @@ body {
   background-color: #f5f5f5;
 }
 
-header {
+header,
+main {
   max-width: 1440px;
   margin: 0 auto;
 }
 
+/* Navigation Menu */
 .navbar {
   display: flex;
   align-items: center;
@@ -45,6 +47,8 @@ header {
   color: #8c8c8c;
 }
 
+/* Navigation Hover Property */
+
 .nav-item:hover {
   width: 100px;
   padding: 10px;
@@ -57,4 +61,172 @@ header {
 
 .nav-item a:hover {
   color: #f5f5f5;
+}
+
+/* About Section */
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.hero-title {
+  font-size: 2rem;
+}
+.profile-name {
+  color: #42446e;
+  padding: 10px 35px;
+}
+
+.profile-name span {
+  background-image: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  color: transparent;
+  background-clip: text;
+  font-size: 5rem;
+  font-style: italic;
+}
+
+.hero-description {
+  text-align: justify;
+  padding: 0 30px;
+  color: #141823;
+}
+
+.img-side {
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  border-radius: 50%;
+  max-width: 80%;
+}
+
+/* Education */
+
+/* Title Class */
+.edu-title,
+.skill-title,
+.ex-title {
+  margin-top: 8rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #42446e;
+}
+
+.edu-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  gap: 50px;
+  background: #e6f0ff;
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 10px;
+}
+
+.course-name {
+  color: #5b3e2c;
+  font-size: 1.5rem;
+  padding-right: 20px;
+}
+
+.institute {
+  color: #5b3e2c;
+  font-size: 1.5rem;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.time {
+  color: #5b3e2c;
+  font-size: 1rem;
+}
+
+.cgpa {
+  display: inline-block;
+  color: white;
+  background: #007bff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+/* Skills */
+
+.skill-para {
+  text-align: center;
+  font-size: 2rem;
+  color: #42446e;
+}
+
+.logo-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  margin-top: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo-img img {
+  max-width: 120px;
+  max-height: 120px;
+  filter: grayscale(0%);
+}
+
+.logo-img img:hover {
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 576px) {
+  /* Nav Bar */
+  .navbar {
+    display: none;
+  }
+
+  /* About */
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .img-side {
+    margin-top: 50px;
+  }
+  .profile {
+    max-width: 80%;
+  }
+
+  .hero-description {
+    padding: 0;
+  }
+
+  /* Education */
+  .edu-contain {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .course-name {
+    padding-right: 0;
+  }
+  .institute {
+    justify-content: center;
+  }
+
+  .logo-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
