@@ -1,7 +1,9 @@
+/* Common Style */
 * {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   background-color: #f5f5f5;
@@ -319,7 +321,11 @@ textarea {
 @media only screen and (max-width: 576px) {
   /* Nav Bar */
   .navbar {
-    display: none;
+    flex-direction: column;
+  }
+
+  .nav-menu {
+    justify-content: space-evenly;
   }
 
   /* About */
