@@ -110,10 +110,12 @@ main {
 /* Title Class */
 .edu-title,
 .skill-title,
-.ex-title {
-  margin-top: 8rem;
+.ex-title,
+.project-title,
+.contact-title {
+  margin-top: 7rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #42446e;
 }
 
@@ -162,8 +164,9 @@ main {
 
 .skill-para {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: #42446e;
+  padding: 20px;
 }
 
 .logo-img {
@@ -184,6 +187,132 @@ main {
 .logo-img img:hover {
   filter: grayscale(100%);
   transition: 0.3s;
+}
+
+/* Experience */
+.ex-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 5rem;
+  gap: 30px;
+  padding: 10px;
+}
+
+.company,
+.position {
+  font-size: 1.5rem;
+  color: #42446e;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #42446e;
+  padding: 10px;
+}
+
+/* Projects */
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin: 3rem 0;
+  align-items: center;
+  justify-items: center;
+}
+
+.card-container {
+  border-radius: 10px;
+  background: #cad5e2;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  max-width: 80%;
+  border-radius: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 10px;
+  color: #42446e;
+}
+
+.card-description {
+  padding: 15px 15px;
+  text-align: justify;
+  color: #42446e;
+}
+
+.card-link {
+  padding: 15px;
+}
+.card-link a {
+  text-decoration: none;
+  color: #8c8c8c;
+}
+
+.card-img img {
+  max-width: 100%;
+}
+
+/* Contact Info */
+.form {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.form input[type="text"],
+input[type="email"],
+textarea {
+  margin-bottom: 24px;
+  border: 0;
+  width: 100%;
+  padding: 15px;
+}
+
+.btn-primary {
+  background-color: tomato;
+  padding: 20px;
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  color: #e6f0ff;
+  font-size: 1rem;
+}
+
+/* Footer Section */
+
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  background: #333333;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: center;
+}
+
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #e0ffff;
+  padding-top: 15px;
+}
+
+.footer-title {
+  color: #e0ffff;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.footer-content {
+  color: #e0ffff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  padding-top: 5px;
 }
 
 /* Mobile Responsive */
@@ -220,13 +349,54 @@ main {
   }
   .course-name {
     padding-right: 0;
+    font-size: 1.4rem;
   }
   .institute {
     justify-content: center;
+    font-size: 1.4rem;
+  }
+
+  .contain-right {
+    padding-top: 10px;
   }
 
   .logo-img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Skills */
+  .skill-para {
+    font-size: 1rem;
+    padding: 10px 5px;
+  }
+
+  /* Expereince */
+  .ex-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 2rem;
+  }
+  .company,
+  .position {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    color: #42446e;
+    padding: 10px;
+    text-align: justify;
+  }
+
+  /* projects */
+  .card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 80%;
   }
 }
